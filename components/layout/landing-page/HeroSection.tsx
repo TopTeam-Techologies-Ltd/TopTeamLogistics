@@ -110,9 +110,7 @@ const HeroSection = () => {
         />
       </motion.div>
 
-      <div className="relative z-20 mt-10">
-        <SiteHeader />
-      </div>
+      <SiteHeader />
 
       {/* Hero Content */}
       <div className="relative z-20 text-center text-white px-4 flex items-center justify-center min-h-screen pt-32 pb-20">

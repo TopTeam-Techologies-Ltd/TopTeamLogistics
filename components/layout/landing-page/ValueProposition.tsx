@@ -52,76 +52,78 @@ const ValueProposition = () => {
   };
 
   return (
-    <Wrapper>
-      <section className="flex flex-col gap-12 justify-center pt-20 pb-14">
-        <motion.h1
-          className="text-4xl text-center font-semibold"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
-        >
-          What sets us apart
-        </motion.h1>
+    <>
+      <Wrapper>
+        <section className="flex flex-col gap-12 justify-center pt-20 pb-14">
+          <motion.h1
+            className="text-4xl text-center font-semibold"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6 }}
+          >
+            What sets us apart
+          </motion.h1>
 
-        <motion.section
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          {valueItems.map((item, index) => (
-            <motion.div
-              key={item.title}
-              className="flex flex-col items-center p-6"
-              variants={itemVariants}
-              whileHover={{
-                scale: 1.05,
-                transition: { type: "spring", stiffness: 300 },
-              }}
-            >
-              {/* Icon - Fixed height container */}
+          <motion.section
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            {valueItems.map((item, index) => (
               <motion.div
-                transition={{ duration: 0.6, ease: "easeInOut" }}
-                className="mb-4 h-20 flex items-center justify-center"
+                key={item.title}
+                className="flex flex-col items-center p-6"
+                variants={itemVariants}
+                whileHover={{
+                  scale: 1.05,
+                  transition: { type: "spring", stiffness: 300 },
+                }}
               >
-                <Image
-                  src={item.icon}
-                  alt={`${item.title} Icon`}
-                  width={80}
-                  height={80}
-                  className="object-contain"
-                />
+                {/* Icon - Fixed height container */}
+                <motion.div
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                  className="mb-4 h-20 flex items-center justify-center"
+                >
+                  <Image
+                    src={item.icon}
+                    alt={`${item.title} Icon`}
+                    width={80}
+                    height={80}
+                    className="object-contain"
+                  />
+                </motion.div>
+
+                {/* Title - Fixed height with flex alignment */}
+                <motion.h2
+                  className="my-title text-xl font-bold text-center h-16 flex items-center justify-center"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 + index * 0.1 }}
+                >
+                  {item.title}
+                </motion.h2>
+
+                {/* Description - Starts at same line for all */}
+                <motion.p
+                  className="w-full my-title font-light md:w-4/5 mx-auto text-center text-sm md:text-base"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 + index * 0.1 }}
+                >
+                  {item.description}
+                </motion.p>
               </motion.div>
-
-              {/* Title - Fixed height with flex alignment */}
-              <motion.h2
-                className="my-title text-xl font-bold text-center h-16 flex items-center justify-center"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 + index * 0.1 }}
-              >
-                {item.title}
-              </motion.h2>
-
-              {/* Description - Starts at same line for all */}
-              <motion.p
-                className="w-full my-title font-light md:w-4/5 mx-auto text-center text-sm md:text-base"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 + index * 0.1 }}
-              >
-                {item.description}
-              </motion.p>
-            </motion.div>
-          ))}
-        </motion.section>
-      </section>
-      <AnimatedSeprator />
-    </Wrapper>
+            ))}
+          </motion.section>
+        </section>
+        <AnimatedSeprator />
+      </Wrapper>
+    </>
   );
 };
 

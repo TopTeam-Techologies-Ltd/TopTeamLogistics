@@ -85,7 +85,7 @@ const WhyWorkWithUs = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative mt-8 lg:mt-0"
           >
-            <div className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[800px] w-full rounded-lg overflow-hidden shadow-xl">
+            <div className="relative h-96 lg:h-[500px] xl:h-[800px] w-full rounded-lg overflow-hidden shadow-xl">
               <Image
                 src="/bgs/whiteman.png"
                 alt="Delivery person with package"

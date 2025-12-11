@@ -1,12 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
-interface AnimatedSeparatorProps {
+
+interface AnimatedSeparatorTwoProps {
   className?: string;
 }
 
-const AnimatedSeprator = ({
+const AnimatedSeparatorTwo = ({
   className = "my-9 flex justify-center",
-}: AnimatedSeparatorProps) => {
+}: AnimatedSeparatorTwoProps) => {
   return (
     <div className={` ${className}`}>
       <motion.div
@@ -14,10 +15,10 @@ const AnimatedSeprator = ({
         whileInView={{ width: "100%", opacity: 1 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 2, ease: "easeInOut" }}
-        className="h-px bg-linear-to-r from-transparent via-[#E7E9ED] to-transparent"
+        className="h-px bg-[#E7E9ED]"
       />
     </div>
   );
 };
 
-export default AnimatedSeprator;
+export default AnimatedSeparatorTwo;

@@ -7,6 +7,7 @@ import { Button } from "../ui/button";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { useState } from "react";
+import AnimatedSepratorTwo from "./AnimatedSepratorTwo";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -26,8 +27,8 @@ const Footer = () => {
 
   return (
     <>
-      <AnimatedSeprator />
-      <footer className=" py-6">
+      <AnimatedSepratorTwo className="my-0 dark:my-9" />
+      <footer className=" pt-16 pb-8">
         <Wrapper>
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -94,7 +95,7 @@ const Footer = () => {
                 <div>
                   <h1 className="my-title mb-2">Join our newsletter</h1>
                 </div>
-                <div className="flex gap-2">
+                <div className="flex flex-wrap gap-2">
                   <input
                     type="email"
                     placeholder="Enter your email"
