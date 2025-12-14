@@ -52,9 +52,7 @@ export function SiteHeaderTwo() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         className={`fixed top-0 left-0 right-0 z-50 w-full py-4 transition-all duration-300 ${
-          isPastHero
-            ? "bg-white/80 dark:bg-[#161c2d]/80 backdrop-blur-md shadow-lg"
-            : "bg-transparent"
+                  isPastHero ? "backdrop-blur-md shadow-lg" : "bg-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
