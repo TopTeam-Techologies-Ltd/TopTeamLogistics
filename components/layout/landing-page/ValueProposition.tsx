@@ -121,7 +121,7 @@ const ValueProposition = () => {
             ))}
           </motion.section>
         </section>
-        <AnimatedSeprator />
+        <AnimatedSeprator className="hidden dark:block" />
       </Wrapper>
     </>
   );
