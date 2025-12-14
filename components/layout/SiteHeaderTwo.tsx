@@ -4,7 +4,6 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { X, Menu } from "lucide-react";
-import Wrapper from "./Wrapper";
 
 const navItems = [
   { name: "About Us", href: "/" },
@@ -12,14 +11,15 @@ const navItems = [
   { name: "Contact", href: "/" },
 ];
 
-export function SiteHeader() {
+export function SiteHeaderTwo() {
   const [isPastHero, setIsPastHero] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const heroHeight = window.innerHeight;
-      const isPast = window.scrollY > heroHeight - 100;
+      // Since your hero is 50vh, calculate based on that
+      const heroHeight = window.innerHeight * 0.5; // 50vh
+      const isPast = window.scrollY > heroHeight - 80; // Trigger slightly before end
 
       if (isPast !== isPastHero) {
         setIsPastHero(isPast);
@@ -49,11 +49,13 @@ export function SiteHeader() {
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 right-0 z-100 w-full py-4 transition-all duration-300 ${
-          isPastHero ? "backdrop-blur-md shadow-lg" : "bg-transparent"
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        className={`fixed top-0 left-0 right-0 z-50 w-full py-4 transition-all duration-300 ${
+                  isPastHero ? "backdrop-blur-md shadow-lg" : "bg-transparent"
         }`}
       >
-        <Wrapper className="flex h-16 items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -88,7 +90,7 @@ export function SiteHeader() {
           {/* Mobile Menu Button */}
           <motion.button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden relative z-110 p-2 rounded-lg hover:bg-white/10 transition-colors"
+            className="md:hidden relative z-50 p-2 rounded-lg hover:bg-white/10 transition-colors"
             whileTap={{ scale: 0.95 }}
             aria-label="Toggle menu"
           >
@@ -101,7 +103,11 @@ export function SiteHeader() {
                   exit={{ rotate: 90, opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <X className="w-6 h-6 text-[#003C71]" />
+                  <X
+                    className={`w-6 h-6 ${
+                      isPastHero ? "text-[#003C71]" : "text-white"
+                    }`}
+                  />
                 </motion.div>
               ) : (
                 <motion.div
@@ -113,9 +119,7 @@ export function SiteHeader() {
                 >
                   <Menu
                     className={`w-6 h-6 ${
-                      isMobileMenuOpen
-                        ? "text-white"
-                        : isPastHero
+                      isPastHero
                         ? "text-gray-800 dark:text-white"
                         : "text-white"
                     }`}
@@ -124,7 +128,7 @@ export function SiteHeader() {
               )}
             </AnimatePresence>
           </motion.button>
-        </Wrapper>
+        </div>
       </motion.header>
 
       {/* Mobile Menu Overlay */}
@@ -147,13 +151,7 @@ export function SiteHeader() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
-              className="
-          fixed top-0 right-0 h-full w-[280px]
-          bg-white/20 dark:bg-gray-900/20
-          backdrop-blur-xl
-          border-l border-white/10
-          shadow-2xl z-40 md:hidden
-        "
+              className="fixed top-0 right-0 h-full w-[280px] bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl border-l border-white/10 shadow-2xl z-40 md:hidden"
             >
               <nav className="flex flex-col pt-24 px-6 space-y-1">
                 {navItems.map((item, index) => (
@@ -166,7 +164,7 @@ export function SiteHeader() {
                     <Link
                       href={item.href}
                       onClick={handleLinkClick}
-                      className="block py-4 px-4 text-lg font-medium text-gray-900 dark:text-gray-200 hover:bg-white/10 rounded-lg transition-all duration-200"
+                      className="block py-4 px-4 text-lg font-medium text-gray-900 dark:text-gray-200 hover:bg-custom-blue/10 hover:text-custom-blue rounded-lg transition-all duration-200"
                     >
                       {item.name}
                     </Link>
