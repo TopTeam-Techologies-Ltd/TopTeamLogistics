@@ -21,9 +21,9 @@ const Footer = () => {
     { name: "Privacy", href: "/" },
   ];
 
-  // Victoria Island, Lagos, Nigeria
+  // London, United Kingdom
   const mapEmbedUrl =
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.660275138293!2d3.4166665!3d6.4281395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sVictoria%20Island%2C%20Lagos!5e0!3m2!1sen!2sng!4v1733835000000!5m2!1sen!2sng";
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19800.50732461158!2d-0.1277583!3d51.5073509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b3337c5e2c9%3A0x2e77b7e8c3d6f9c!2sLondon%2C%20UK!5e0!3m2!1sen!2suk!4v1733835000000!5m2!1sen!2suk";
 
   return (
     <>
@@ -118,16 +118,16 @@ const Footer = () => {
             </p>
             <div className="flex gap-5 mt-4 md:mt-0">
               <a href="#" target="_blank" rel="noopener noreferrer">
-                <FaXTwitter className="w-5 h-5 icons-color hover:text-green-600 transition-colors" />
+                <FaXTwitter className="w-5 h-5 icons-color hover:text-[#00A8E1] transition-colors" />
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer">
-                <FaFacebookF className="w-5 h-5 icons-color hover:text-green-600 transition-colors" />
+                <FaFacebookF className="w-5 h-5 icons-color hover:text-[#00A8E1] transition-colors" />
               </a>
               <a href="" target="_blank" rel="noopener noreferrer">
-                <FaInstagram className="w-5 h-5 icons-color hover:text-green-600 transition-colors" />
+                <FaInstagram className="w-5 h-5 icons-color hover:text-[#00A8E1] transition-colors" />
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer">
-                <FaLinkedinIn className="w-5 h-5 icons-color hover:text-green-600 transition-colors" />
+                <FaLinkedinIn className="w-5 h-5 icons-color hover:text-[#00A8E1] transition-colors" />
               </a>
             </div>
           </div>
