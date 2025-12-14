@@ -12,8 +12,9 @@ const satoshi = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Smart Codebase | Next.js + TypeScript + Tailwind",
-  description: "A smart, modern codebase setup with best practices",
+  title: "TopTeam Logistics | Scalable Delivery & Fulfillment",
+  description:
+    "Scalable, reliable delivery and logistics solutions designed to support growing businesses and complex operations.",
 };
 
 export default function RootLayout({

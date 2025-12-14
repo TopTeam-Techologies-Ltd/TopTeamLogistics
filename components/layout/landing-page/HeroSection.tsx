@@ -13,42 +13,76 @@ import { SiteHeader } from "../SiteHeader";
 const heroSlides = [
   {
     id: 1,
-    image:
-      "https://images.unsplash.com/photo-1556382363-8967ad2b37f0?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "/bgs/hero/bg1.png",
     subtitle: "Delivery Excellence",
     title: "Professional Standards,\nEvery Single Time",
     description:
-      "Dedicated professionals committed to bringing smiles to your doorstep, rain or shine, with our modern fleet and unwavering commitment",
+      "Dedicated logistics professionals delivering consistent, reliable service through modern operations and a commitment to excellence.",
   },
   {
     id: 2,
-    image:
-      "https://images.unsplash.com/photo-1591270551371-3401a1a9382f?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    subtitle: "Safe, Reliable, Every Package, Every Time",
-    title: "Delivering for Amazon.\nPowered by Us.",
+    image: "/bgs/hero/bg2.png",
+    subtitle: "Reliable & Scalable Operations",
+    title: "Powering Business\nDeliveries.",
     description:
-      "We are a trusted Amazon Delivery Service Partner (DSP) based in Peterborough, providing last-mile delivery excellence straight to your doorstep",
+      "We partner with businesses to provide dependable last-mile delivery solutions designed to scale with growing operational demands.",
   },
   {
     id: 3,
-    image:
-      "https://images.unsplash.com/photo-1749244768351-2726dc23d26c?q=80&w=2224&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    subtitle: "State-of-the-Art Operations",
-    title: "Where Excellence\nBegins.",
+    image: "/bgs/hero/bg3.png",
+    subtitle: "Modern Infrastructure",
+    title: "Where Operational\nExcellence Begins.",
     description:
-      "Our modern warehouse facilities ensure every package is handled with care, from storage to final dispatch, maintaining Amazon's high standards",
+      "Our facilities and workflows are built to ensure every shipment is handled with precision, care, and efficiency from dispatch to delivery.",
   },
   {
     id: 4,
-    image:
-      "https://images.unsplash.com/photo-1624984608976-8a7358d25bce?q=80&w=2371&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 
-    subtitle: "Expertise You Can Trust",
-    title: "Trained Teams.\nQuality Service.",
+    image: "/bgs/hero/bg4.png",
+    subtitle: "Expert Teams",
+    title: "Trained People.\nReliable Service.",
     description:
-      "Continuous professional development keeps our delivery associates at the forefront of industry best practices and customer service excellence",
+      "Our teams are continuously trained to uphold industry best practices, ensuring quality service across every delivery partnership.",
   },
 ];
+// const heroSlides = [
+//   {
+//     id: 1,
+//     image:
+//       "https://images.unsplash.com/photo-1556382363-8967ad2b37f0?q=80&w=2370&auto=format&fit=crop",
+//     subtitle: "Delivery Excellence",
+//     title: "Professional Standards,\nEvery Single Time",
+//     description:
+//       "Dedicated logistics professionals delivering consistent, reliable service through modern operations and a commitment to excellence.",
+//   },
+//   {
+//     id: 2,
+//     image:
+//       "https://images.unsplash.com/photo-1591270551371-3401a1a9382f?q=80&w=2370&auto=format&fit=crop",
+//     subtitle: "Reliable & Scalable Operations",
+//     title: "Powering Business\nDeliveries.",
+//     description:
+//       "We partner with businesses to provide dependable last-mile delivery solutions designed to scale with growing operational demands.",
+//   },
+//   {
+//     id: 3,
+//     image:
+//       "https://images.unsplash.com/photo-1749244768351-2726dc23d26c?q=80&w=2224&auto=format&fit=crop",
+//     subtitle: "Modern Infrastructure",
+//     title: "Where Operational\nExcellence Begins.",
+//     description:
+//       "Our facilities and workflows are built to ensure every shipment is handled with precision, care, and efficiency from dispatch to delivery.",
+//   },
+//   {
+//     id: 4,
+//     image:
+//       "https://images.unsplash.com/photo-1624984608976-8a7358d25bce?q=80&w=2371&auto=format&fit=crop",
+//     subtitle: "Expert Teams",
+//     title: "Trained People.\nReliable Service.",
+//     description:
+//       "Our teams are continuously trained to uphold industry best practices, ensuring quality service across every delivery partnership.",
+//   },
+// ];
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -105,7 +139,7 @@ const HeroSection = () => {
           className="absolute inset-0 z-10"
           style={{
             background:
-              "linear-gradient(rgba(22, 28, 45, 0.7), rgba(22, 28, 45, 0.8))",
+              "linear-gradient(rgba(22, 28, 45, 0.9), rgba(22, 28, 45, 0.8))",
           }}
         />
       </motion.div>

@@ -169,6 +169,8 @@ html {
     @apply bg-background text-foreground;
     transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
       color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    max-width: 1920px;
+    margin: 0 auto;
   }
 }
 
