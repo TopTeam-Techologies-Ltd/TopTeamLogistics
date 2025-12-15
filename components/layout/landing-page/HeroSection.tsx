@@ -14,7 +14,7 @@ const heroSlides = [
   {
     id: 1,
     image: "/bgs/hero/bg1.png",
-    subtitle: "Delivery Excellence",
+    subtitle: "Safe, Reliable, Every Package, Every Time",
     title: "Professional Standards,\nEvery Single Time",
     description:
       "Dedicated logistics professionals delivering consistent, reliable service through modern operations and a commitment to excellence.",

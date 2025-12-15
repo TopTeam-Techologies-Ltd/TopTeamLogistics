@@ -4,7 +4,6 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { X, Menu } from "lucide-react";
-import Wrapper from "./Wrapper";
 
 const navItems = [
   { name: "About Us", href: "/" },
@@ -19,18 +18,16 @@ export function SiteHeader() {
   useEffect(() => {
     const handleScroll = () => {
       const heroHeight = window.innerHeight;
-      const isPast = window.scrollY > heroHeight - 100;
+      const triggerPoint = heroHeight * 0.15;
 
-      if (isPast !== isPastHero) {
-        setIsPastHero(isPast);
-      }
+      setIsPastHero(window.scrollY > triggerPoint);
     };
 
     window.addEventListener("scroll", handleScroll);
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isPastHero]);
+  }, []);
 
   // Close mobile menu when clicking on a link
   const handleLinkClick = () => {
@@ -55,7 +52,16 @@ export function SiteHeader() {
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
+        <div
+          className="
+  mx-auto 
+  max-w-7xl 
+  2xl:max-w-[1440px]
+  3xl:max-w-[1600px]
+  px-4 sm:px-6 lg:px-8
+  flex h-16 items-center justify-between
+"
+        >
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}

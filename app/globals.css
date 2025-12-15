@@ -90,7 +90,7 @@ html {
   /* Smart Color Variables - ADD THESE */
   --color-blue: #00a8e1;
   --color-paragraph: #838696;
-  --color-form: #5C5F6E;
+  --color-form: #5c5f6e;
   --color-title: #161c2d;
   --color-icons: #a0a2ab;
   --color-bg-accent: #003c71;
@@ -174,7 +174,7 @@ html {
     @apply bg-background text-foreground;
     transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
       color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    max-width: 1920px;
+    max-width: 2234px;
     margin: 0 auto;
   }
 }

@@ -97,14 +97,14 @@ const Content = () => {
               </p>
             </div>
             {/* CTA */}
-            <div id="apply-now" className="space-y-2">
+            <div  className="space-y-2">
               <h3 className="text-xl font-semibold">
                 Ready to get on the road?
               </h3>
               <p className="font-light">
                 Take the next step in your career today – apply now and start
                 delivering with confidence.
-              </p>
+              </p> 
             </div>
             <div className="flex items-center justify-center md:justify-start">
               <Button variant={"myblue"} size={"custom"}>

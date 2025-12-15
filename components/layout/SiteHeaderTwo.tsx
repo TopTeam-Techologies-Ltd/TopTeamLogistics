@@ -17,20 +17,17 @@ export function SiteHeaderTwo() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Since your hero is 50vh, calculate based on that
-      const heroHeight = window.innerHeight * 0.5; // 50vh
-      const isPast = window.scrollY > heroHeight - 80; // Trigger slightly before end
+      const heroHeight = window.innerHeight;
+      const triggerPoint = heroHeight * 0.15;
 
-      if (isPast !== isPastHero) {
-        setIsPastHero(isPast);
-      }
+      setIsPastHero(window.scrollY > triggerPoint);
     };
 
     window.addEventListener("scroll", handleScroll);
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isPastHero]);
+  }, []);
 
   // Close mobile menu when clicking on a link
   const handleLinkClick = () => {
@@ -57,7 +54,16 @@ export function SiteHeaderTwo() {
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
+        <div
+          className="
+  mx-auto 
+  max-w-7xl 
+  2xl:max-w-[1440px]
+  3xl:max-w-[1600px]
+  px-4 sm:px-6 lg:px-8
+  flex h-16 items-center justify-between
+"
+        >
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
