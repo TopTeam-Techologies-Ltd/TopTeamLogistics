@@ -38,7 +38,7 @@ const Faq = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-20 md:py-36 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
         {/* Left Section */}
         <section className="flex flex-col justify-center gap-6">
-          <h1 className="w-full text-center md:text-start md:w-[90%] lg:w-[70%] text-3xl md:text-4xl text-white tracking-widest font-bold leading-tight">
+          <h1 className="w-full text-center md:text-start md:w-[90%] lg:w-[70%] text-3xl md:text-5xl text-white tracking-widest font-bold leading-tight">
             Frequently Asked Questions
           </h1>
           <p className="w-full text-center tracking-widest text-sm font-light text-[#FFFFFF] leading-relaxed md:w-[70%] md:text-start">

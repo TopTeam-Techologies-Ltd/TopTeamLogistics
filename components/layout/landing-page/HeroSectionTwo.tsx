@@ -7,6 +7,7 @@ import {
 } from "framer-motion";
 import { SiteHeaderTwo } from "@/components/layout/SiteHeaderTwo";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { ArrowDown } from "lucide-react";
 
 const HeroSectionTwo = () => {
@@ -22,7 +23,7 @@ const HeroSectionTwo = () => {
 
   return (
     <>
-      <section className="relative h-[50vh] overflow-hidden pb-32">
+      <section className="relative h-[60vh] md:h-[55vh] 2xl:h-[50vh] overflow-hidden pb-32">
         {/* Background */}
         <motion.div className="absolute inset-0 z-0 bg-[#161c2d]" style={{ y }}>
           <motion.div
@@ -76,13 +77,16 @@ const HeroSectionTwo = () => {
                   ))}
                 </div>
                 <div>
-                  <Button
-                    size={"lg"}
-                    className="bg-white text-[#003C71] text-lg"
-                  >
-                    Apply Now
-                    <ArrowDown />
-                  </Button>
+                  <Link href={"#apply-now"}>
+                    <Button
+                      size={"lg"}
+                      className="bg-white text-[#003C71] text-lg"
+                      type="button"
+                    >
+                      Apply Now
+                      <ArrowDown />
+                    </Button>
+                  </Link>
                 </div>
               </motion.div>
             </AnimatePresence>

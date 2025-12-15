@@ -15,9 +15,9 @@ const Footer = () => {
 
   const navItems = [
     { name: "About Us", href: "/" },
-    { name: "Join our Team", href: "/" },
-    { name: "Contact Us", href: "/" },
-    { name: "Help", href: "/" },
+    { name: "Join our Team", href: "/join-team" },
+    { name: "Contact Us", href: "/join-team#apply-now" },
+    { name: "Help", href: "/join-team#apply-now" },
     { name: "Privacy", href: "/" },
   ];
 
@@ -35,12 +35,14 @@ const Footer = () => {
               {/* Company Info */}
               <div className="flex flex-col gap-4">
                 <div>
-                  <Image
-                    src="/icons/logo-dark.png"
-                    alt="Logo"
-                    width={150}
-                    height={80}
-                  />
+                  <Link href={"/"}>
+                    <Image
+                      src="/icons/logo-dark.png"
+                      alt="Logo"
+                      width={150}
+                      height={80}
+                    />
+                  </Link>
                 </div>
                 <p className="my-paragraph text-sm tracking-wider leading-8 font-light text-justify">
                   TopTeam Logistics is a trusted delivery partner based in
@@ -93,9 +95,11 @@ const Footer = () => {
 
                 {/* Newsletter */}
                 <div>
-                  <h1 className="my-title mb-2">Join our newsletter</h1>
+                  <h1 className="my-title mb-2 text-center lg:text-start">
+                    Join our newsletter
+                  </h1>
                 </div>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 justify-center xl:justify-start">
                   <input
                     type="email"
                     placeholder="Enter your email"

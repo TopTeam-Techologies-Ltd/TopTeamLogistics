@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 import Wrapper from "../Wrapper";
 import AnimatedSeprator from "../AnimatedSeprator";
 import { Button } from "@/components/ui/button";
@@ -19,9 +19,11 @@ const JoinUsSection = () => {
               outstanding service
             </p>
             <div className="flex items-center justify-center">
-              <Button variant={"myblue"} size={"custom"}>
-                Send Application
-              </Button>
+              <Link href={"/join-team"}>
+                <Button type="button" variant={"myblue"} size={"custom"}>
+                  Send Application
+                </Button>
+              </Link>
             </div>
           </section>
         </Wrapper>

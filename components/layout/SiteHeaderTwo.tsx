@@ -52,7 +52,9 @@ export function SiteHeaderTwo() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         className={`fixed top-0 left-0 right-0 z-50 w-full py-4 transition-all duration-300 ${
-                  isPastHero ? "backdrop-blur-md shadow-lg" : "bg-transparent"
+          isPastHero
+            ? "bg-white/80 dark:bg-[#161c2d]/80 backdrop-blur-md shadow-lg"
+            : "bg-transparent"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
@@ -103,11 +105,7 @@ export function SiteHeaderTwo() {
                   exit={{ rotate: 90, opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <X
-                    className={`w-6 h-6 ${
-                      isPastHero ? "text-[#003C71]" : "text-white"
-                    }`}
-                  />
+                  <X className="w-6 h-6 text-[#00a8e1]" />
                 </motion.div>
               ) : (
                 <motion.div
@@ -151,7 +149,7 @@ export function SiteHeaderTwo() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
-              className="fixed top-0 right-0 h-full w-[280px] bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl border-l border-white/10 shadow-2xl z-40 md:hidden"
+              className="fixed top-0 right-0 h-full w-[280px] bg-white/20 dark:bg-gray-900/20 backdrop-blur-xl border-l border-white/10 shadow-2xl z-40 md:hidden"
             >
               <nav className="flex flex-col pt-24 px-6 space-y-1">
                 {navItems.map((item, index) => (
@@ -164,7 +162,7 @@ export function SiteHeaderTwo() {
                     <Link
                       href={item.href}
                       onClick={handleLinkClick}
-                      className="block py-4 px-4 text-lg font-medium text-gray-900 dark:text-gray-200 hover:bg-custom-blue/10 hover:text-custom-blue rounded-lg transition-all duration-200"
+                      className="block py-4 px-4 text-lg font-medium text-[#ffff] dark:text-gray-200 hover:bg-white/10 rounded-lg transition-all duration-200"
                     >
                       {item.name}
                     </Link>
