@@ -1,10 +1,7 @@
 "use client";
-
-import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Wrapper from "../Wrapper";
-import { div } from "framer-motion/client";
 
 const WhyWorkWithUs = () => {
   const features = [

@@ -9,7 +9,7 @@ import Wrapper from "./Wrapper";
 const navItems = [
   { name: "About Us", href: "/" },
   { name: "Join our Team", href: "/join-team" },
-  { name: "Contact", href: "/" },
+  { name: "Contact", href: "/join-team#apply-now" },
 ];
 
 export function SiteHeader() {
@@ -49,11 +49,13 @@ export function SiteHeader() {
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 right-0 z-100 w-full py-4 transition-all duration-300 ${
-          isPastHero ? "backdrop-blur-md shadow-lg" : "bg-transparent"
+        className={`fixed top-0 left-0 right-0 z-50 w-full py-4 transition-all duration-300 ${
+          isPastHero
+            ? "bg-white/80 dark:bg-[#161c2d]/80 backdrop-blur-md shadow-lg"
+            : "bg-transparent"
         }`}
       >
-        <Wrapper className="flex h-16 items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -101,7 +103,7 @@ export function SiteHeader() {
                   exit={{ rotate: 90, opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <X className="w-6 h-6 text-[#003C71]" />
+                  <X className="w-6 h-6 text-[#00a8e1]" />
                 </motion.div>
               ) : (
                 <motion.div
@@ -124,7 +126,7 @@ export function SiteHeader() {
               )}
             </AnimatePresence>
           </motion.button>
-        </Wrapper>
+        </div>
       </motion.header>
 
       {/* Mobile Menu Overlay */}
@@ -166,7 +168,7 @@ export function SiteHeader() {
                     <Link
                       href={item.href}
                       onClick={handleLinkClick}
-                      className="block py-4 px-4 text-lg font-medium text-gray-900 dark:text-gray-200 hover:bg-white/10 rounded-lg transition-all duration-200"
+                      className="block py-4 px-4 text-lg font-medium text-[#ffff] dark:text-gray-200 hover:bg-white/10 rounded-lg transition-all duration-200"
                     >
                       {item.name}
                     </Link>

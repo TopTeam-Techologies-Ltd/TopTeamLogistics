@@ -48,6 +48,7 @@ html {
   /* Add your custom colors */
   --color-blue: var(--color-blue);
   --color-paragraph: var(--color-paragraph);
+  --color-form: var(--color-form);
   --color-title: var(--color-title);
   --color-icons: var(--color-icons);
   --color-bg-accent: var(--color-bg-accent);
@@ -89,6 +90,7 @@ html {
   /* Smart Color Variables - ADD THESE */
   --color-blue: #00a8e1;
   --color-paragraph: #838696;
+  --color-form: #5C5F6E;
   --color-title: #161c2d;
   --color-icons: #a0a2ab;
   --color-bg-accent: #003c71;
@@ -128,6 +130,7 @@ html {
   --sidebar-ring: oklch(0.551 0.027 264.364);
   /* Dark mode specific colors if needed */
   --color-title: #ffffff; /* White titles in dark mode */
+  --color-form: #ffffff; /* White titles in dark mode */
   --color-paragraph: #cbd5e1; /* Lighter paragraphs in dark mode */
 }
 
@@ -147,7 +150,9 @@ html {
   .my-paragraph {
     color: var(--color-paragraph);
   }
-
+  .form-color {
+    color: var(--color-form);
+  }
   .my-title {
     color: var(--color-title);
   }
