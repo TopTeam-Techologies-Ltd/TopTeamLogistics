@@ -4,6 +4,8 @@ import { ThemeProvider } from "@/components/theme/theme-provider";
 import Footer from "@/components/layout/Footer";
 import { FloatingThemeToggle } from "@/components/theme/theme-toggle";
 import localFont from "next/font/local";
+import CookieBanner from "@/components/CookieBanner";
+import { createMetadata } from "@/lib/seo";
 
 // font configuration
 const satoshi = localFont({
@@ -11,11 +13,11 @@ const satoshi = localFont({
   variable: "--font-satoshi",
 });
 
-export const metadata: Metadata = {
-  title: "TopTeam Logistics | Scalable Delivery & Fulfillment",
+export const metadata = createMetadata({
+  title: "Safe, Reliable, Every Package, Every Time",
   description:
-    "Scalable, reliable delivery and logistics solutions designed to support growing businesses and complex operations.",
-};
+    "Flexible last-mile delivery and logistics services supporting businesses, partners, and growing operations across the UK.",
+});
 
 export default function RootLayout({
   children,
@@ -35,6 +37,7 @@ export default function RootLayout({
             <main className="flex-1">{children}</main>
             <FloatingThemeToggle />
             <Footer />
+            <CookieBanner />
           </div>
         </ThemeProvider>
       </body>

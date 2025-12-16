@@ -8,7 +8,7 @@ import { X, Menu } from "lucide-react";
 const navItems = [
   { name: "About Us", href: "/" },
   { name: "Join our Team", href: "/join-team" },
-  { name: "Contact", href: "/" },
+  { name: "Contact", href: "/join-team#contact-us" },
 ];
 
 export function SiteHeaderTwo() {

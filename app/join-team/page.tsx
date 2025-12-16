@@ -1,3 +1,11 @@
+import { createMetadata } from "@/lib/seo";
+
+export const metadata = createMetadata({
+  title: "Join Our Team",
+  description:
+    "Build your career in logistics with TopTeam Logistics. Flexible roles, supportive teams, and opportunities to grow across the UK.",
+});
+
 import HeroSectionTwo from "@/components/layout/landing-page/HeroSectionTwo";
 import Content from "./Content";
 import Contact from "./Contact";

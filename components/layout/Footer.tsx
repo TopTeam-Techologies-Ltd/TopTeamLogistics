@@ -16,8 +16,8 @@ const Footer = () => {
   const navItems = [
     { name: "About Us", href: "/" },
     { name: "Join our Team", href: "/join-team" },
-    { name: "Contact Us", href: "/join-team#apply-now" },
-    { name: "Help", href: "/join-team#apply-now" },
+    { name: "Contact Us", href: "/join-team#contact-us" },
+    { name: "Help", href: "/join-team#contact-us" },
     { name: "Privacy", href: "/" },
   ];
 
