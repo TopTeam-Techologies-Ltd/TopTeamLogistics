@@ -10,22 +10,22 @@ const Faq = () => {
     {
       question: "Can I join as a delivery driver?",
       answer:
-        "Yes! We're always looking for reliable and dedicated delivery drivers to join our team. You'll need a valid driver's license, clean driving record, and the ability to pass a background check. We provide comprehensive training, branded Amazon vehicles, and full support to help you succeed.",
+        "Yes! We're always looking for reliable and dedicated delivery drivers to join our team. You'll need a valid driver's license, a clean driving record, and the ability to pass a background check. We provide comprehensive training, company-provided vehicles, and full operational support to help you succeed.",
     },
     {
       question: "Do you own the vans?",
       answer:
-        "Yes, all our delivery vans are owned and maintained by TopTeam Logistics. We provide fully branded Amazon vehicles with insurance coverage included. Our drivers don't need to worry about vehicle costs, maintenance, or insurance - everything is taken care of so you can focus on delivering excellent service.",
+        "Yes, all our delivery vans are owned and maintained by TopTeam Logistics. Our vehicles are fully insured and regularly serviced, so drivers don’t need to worry about vehicle costs, maintenance, or insurance. Everything is taken care of, allowing you to focus on delivering excellent service.",
     },
     {
       question: "How fast is delivery?",
       answer:
-        "We offer same-day and next-day delivery options depending on your location in Peterborough and surrounding areas. Most packages are delivered within 24-48 hours of being dispatched from our warehouse. We use advanced routing software to optimize delivery times and ensure your packages arrive as quickly as possible.",
+        "We offer same-day and next-day delivery options depending on your location in Peterborough and surrounding areas. Most deliveries are completed within 24–48 hours of dispatch. We use advanced routing and logistics tools to optimise delivery times and ensure consistent, reliable service.",
     },
     {
       question: "What areas do you cover?",
       answer:
-        "We primarily serve Peterborough and the surrounding regions as an Amazon Delivery Service Partner. Our delivery network covers residential and commercial areas within our designated service zone. If you're unsure whether we deliver to your area, please contact our support team for confirmation.",
+        "We primarily serve Peterborough and the surrounding regions, covering both residential and commercial delivery routes. Our service areas are defined by operational requirements and may expand over time. If you're unsure whether we operate in your area, please contact our team for confirmation.",
     },
   ];
 

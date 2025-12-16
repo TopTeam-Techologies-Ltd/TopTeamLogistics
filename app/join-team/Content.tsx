@@ -74,7 +74,7 @@ const Content = () => {
               </ul>
             </div>
             {/* Requirements */}
-            <div className="space-y-4">
+            <div id="apply-now" className="space-y-4">
               <h3 className="text-xl font-semibold">📝 Requirements</h3>
 
               <ul className="space-y-3 font-light  list-disc list-inside">
@@ -97,14 +97,14 @@ const Content = () => {
               </p>
             </div>
             {/* CTA */}
-            <div  className="space-y-2">
+            <div className="space-y-2">
               <h3 className="text-xl font-semibold">
                 Ready to get on the road?
               </h3>
               <p className="font-light">
                 Take the next step in your career today – apply now and start
                 delivering with confidence.
-              </p> 
+              </p>
             </div>
             <div className="flex items-center justify-center md:justify-start">
               <Button variant={"myblue"} size={"custom"}>

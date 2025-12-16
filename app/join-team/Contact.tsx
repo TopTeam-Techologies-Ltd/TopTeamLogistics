@@ -260,7 +260,7 @@ const Contact = () => {
       <AnimatedSeprator className="dark:lg:hidden my-0" />
 
       <div
-        id="#contact"
+        id="contact-us"
         className="bg-[#FAFAFA] pt-14 pb-52 dark:bg-[#020618] relative z-0"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
