@@ -14,7 +14,7 @@ const satoshi = localFont({
 });
 
 export const metadata = createMetadata({
-  title: "Safe, Reliable, Every Package, Every Time",
+  title: "TopTeam Logistics",
   description:
     "Flexible last-mile delivery and logistics services supporting businesses, partners, and growing operations across the UK.",
 });
